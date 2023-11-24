@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.0" type="incidents">
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of io.ktor:ktor-client-core than 2.3.5 is available: 2.3.6">
+        <fix-replace
+            description="Change to 2.3.6"
+            family="Update versions"
+            oldString="2.3.5"
+            replacement="2.3.6"/>
+        <location
+            file="${:*projectDir}/gradle/libs.versions.toml"
+            line="5"
+            column="8"
+            startOffset="94"
+            endLine="5"
+            endColumn="15"
+            endOffset="101"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of io.ktor:ktor-client-okhttp than 2.3.5 is available: 2.3.6">
+        <fix-replace
+            description="Change to 2.3.6"
+            family="Update versions"
+            oldString="2.3.5"
+            replacement="2.3.6"/>
+        <location
+            file="${:*projectDir}/gradle/libs.versions.toml"
+            line="5"
+            column="8"
+            startOffset="94"
+            endLine="5"
+            endColumn="15"
+            endOffset="101"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of io.ktor:ktor-client-content-negotiation than 2.3.5 is available: 2.3.6">
+        <fix-replace
+            description="Change to 2.3.6"
+            family="Update versions"
+            oldString="2.3.5"
+            replacement="2.3.6"/>
+        <location
+            file="${:*projectDir}/gradle/libs.versions.toml"
+            line="5"
+            column="8"
+            startOffset="94"
+            endLine="5"
+            endColumn="15"
+            endOffset="101"/>
+    </incident>
+
+</incidents>

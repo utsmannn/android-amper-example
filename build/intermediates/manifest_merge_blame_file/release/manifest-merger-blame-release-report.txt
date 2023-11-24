@@ -1,0 +1,119 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.utsman.kece" >
+4
+5    <uses-sdk
+6        android:maxSdkVersion="34"
+7        android:minSdkVersion="21"
+8        android:targetSdkVersion="34" />
+9
+10    <uses-permission android:name="android.permission.INTERNET" />
+10-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:3:5-66
+10-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:3:22-64
+11
+12    <permission
+12-->[androidx.core:core:1.10.0] /Users/muhammadutsman/.gradle/caches/transforms-3/025cd5af7316465b3a8ffbba0233b8c1/transformed/core-1.10.0/AndroidManifest.xml:22:5-24:47
+13        android:name="com.utsman.kece.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+13-->[androidx.core:core:1.10.0] /Users/muhammadutsman/.gradle/caches/transforms-3/025cd5af7316465b3a8ffbba0233b8c1/transformed/core-1.10.0/AndroidManifest.xml:23:9-81
+14        android:protectionLevel="signature" />
+14-->[androidx.core:core:1.10.0] /Users/muhammadutsman/.gradle/caches/transforms-3/025cd5af7316465b3a8ffbba0233b8c1/transformed/core-1.10.0/AndroidManifest.xml:24:9-44
+15
+16    <uses-permission android:name="com.utsman.kece.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+16-->[androidx.core:core:1.10.0] /Users/muhammadutsman/.gradle/caches/transforms-3/025cd5af7316465b3a8ffbba0233b8c1/transformed/core-1.10.0/AndroidManifest.xml:26:5-97
+16-->[androidx.core:core:1.10.0] /Users/muhammadutsman/.gradle/caches/transforms-3/025cd5af7316465b3a8ffbba0233b8c1/transformed/core-1.10.0/AndroidManifest.xml:26:22-94
+17
+18    <application
+18-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:5:5-15:19
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.10.0] /Users/muhammadutsman/.gradle/caches/transforms-3/025cd5af7316465b3a8ffbba0233b8c1/transformed/core-1.10.0/AndroidManifest.xml:28:18-86
+20        android:extractNativeLibs="true"
+21        android:label="Amper android" >
+21-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:6:9-38
+22        <activity
+22-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:7:9-14:20
+23            android:name="hello.world.MainActivity"
+23-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:7:19-58
+24            android:exported="true"
+24-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:9:19-42
+25            android:theme="@style/Theme.AppCompat.Light" >
+25-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:8:19-63
+26            <intent-filter>
+26-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:10:13-13:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:11:17-68
+27-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:11:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:12:17-76
+29-->/Users/muhammadutsman/Development/android-amper/src/AndroidManifest.xml:12:27-74
+30            </intent-filter>
+31        </activity>
+32
+33        <provider
+33-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+34            android:name="androidx.startup.InitializationProvider"
+34-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+35            android:authorities="com.utsman.kece.androidx-startup"
+35-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+36            android:exported="false" >
+36-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+37            <meta-data
+37-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+38                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+38-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+39                android:value="androidx.startup" />
+39-->[androidx.emoji2:emoji2:1.4.0] /Users/muhammadutsman/.gradle/caches/transforms-3/301cf7667129d97da625126c42e155aa/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+40            <meta-data
+40-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/muhammadutsman/.gradle/caches/transforms-3/0bd0bd989a21157491f3b81959359a85/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+41                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+41-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/muhammadutsman/.gradle/caches/transforms-3/0bd0bd989a21157491f3b81959359a85/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+42                android:value="androidx.startup" />
+42-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/muhammadutsman/.gradle/caches/transforms-3/0bd0bd989a21157491f3b81959359a85/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+43            <meta-data
+43-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+44                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+44-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+45                android:value="androidx.startup" />
+45-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+46        </provider>
+47
+48        <receiver
+48-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+49            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+49-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+50            android:directBootAware="false"
+50-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+51            android:enabled="true"
+51-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+52            android:exported="true"
+52-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+53            android:permission="android.permission.DUMP" >
+53-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+54            <intent-filter>
+54-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+55                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+55-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+55-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+56            </intent-filter>
+57            <intent-filter>
+57-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+58                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+58-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+58-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+59            </intent-filter>
+60            <intent-filter>
+60-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+61                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+62            </intent-filter>
+63            <intent-filter>
+63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+64                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/muhammadutsman/.gradle/caches/transforms-3/f1fae1bab0cccdb5b2c7d0346d8b7fad/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+65            </intent-filter>
+66        </receiver>
+67    </application>
+68
+69</manifest>

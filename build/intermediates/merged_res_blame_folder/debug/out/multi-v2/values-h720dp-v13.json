@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.utsman.kece-mergeDebugResources-43:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/muhammadutsman/.gradle/caches/transforms-3/d9e6ddb03e8210adf8034e7d2dbaa9ec/transformed/appcompat-1.6.1/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
