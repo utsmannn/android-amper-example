@@ -22,6 +22,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.utsman.kece.BuildConfig
+import com.utsman.kece.productlist.ProductList
 import io.ktor.client.*
 import io.ktor.client.engine.okhttp.*
 import io.ktor.client.request.*
@@ -39,7 +40,6 @@ sealed interface RenderState {
 
 object WebService {
     private val client = HttpClient(OkHttp)
-
     suspend fun getProductFlow(): Flow<RenderState> {
 
         return flow {

@@ -1,6 +1,9 @@
 # Have feedback? Share it here https://surveys.jetbrains.com/s3/Amper-feedback-form
 
-product: android/app
+product:
+    type: lib
+    platforms:
+        - android
 
 dependencies: 
   - $compose.foundation
@@ -13,10 +16,8 @@ dependencies:
   - io.ktor:ktor-client-logging:2.3.6
   - io.ktor:ktor-client-content-negotiation:2.3.6
   - io.ktor:ktor-client-encoding:2.3.6
-  - ./features/productlist # module feature product list
-  - ./features/cart # module feature cart
 
 settings: 
   compose: enabled
   android: 
-    namespace: com.utsman.kece
+    namespace: com.utsman.kece.cart
