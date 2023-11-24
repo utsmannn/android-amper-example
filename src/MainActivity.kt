@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.BasicText
@@ -20,6 +21,7 @@ import androidx.compose.ui.graphics.ColorProducer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.utsman.kece.BuildConfig
 import io.ktor.client.*
 import io.ktor.client.engine.okhttp.*
 import io.ktor.client.request.*
@@ -37,7 +39,7 @@ sealed interface RenderState {
 
 object WebService {
     private val client = HttpClient(OkHttp)
-    
+
     suspend fun getProductFlow(): Flow<RenderState> {
 
         return flow {
@@ -58,12 +60,12 @@ object WebService {
 class MainViewModel : ViewModel() {
     private val _renderState: MutableStateFlow<RenderState> = MutableStateFlow(RenderState.Idle)
     val renderState: StateFlow<RenderState> = _renderState.asStateFlow()
-    
+
     fun getProduct() = viewModelScope.launch {
         WebService
-            .getProductFlow()
-            .stateIn(this)
-            .collect(_renderState)
+                .getProductFlow()
+                .stateIn(this)
+                .collect(_renderState)
     }
 }
 
@@ -71,7 +73,7 @@ class MainViewModel : ViewModel() {
 fun Screen() {
     val viewModel: MainViewModel = viewModel()
     val state by viewModel.renderState.collectAsState()
-    
+
     LaunchedEffect(Unit) {
         viewModel.getProduct()
     }
@@ -86,19 +88,22 @@ fun Screen() {
                 is RenderState.RenderLoading -> {
                     CircularProgressIndicator()
                 }
+
                 is RenderState.RenderProduct -> {
                     BasicText(
-                        text = value.product
+                            text = value.product
                     )
                 }
+
                 is RenderState.RenderFailure -> {
                     BasicText(
-                        text = value.throwable.localizedMessage.orEmpty(),
-                        color = ColorProducer {
-                            Color.Red
-                        }
+                            text = value.throwable.localizedMessage.orEmpty(),
+                            color = ColorProducer {
+                                Color.Red
+                            }
                     )
                 }
+
                 else -> {}
             }
         }
@@ -106,10 +111,22 @@ fun Screen() {
 }
 
 class MainActivity : AppCompatActivity() {
+
+    private val versionName by lazy {
+        BuildConfig.VERSION_NAME
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Screen()
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                BasicText(
+                    text = "version: v$versionName"
+                )
+            }
         }
     }
 }
