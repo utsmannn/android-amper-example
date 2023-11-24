@@ -1,25 +1,13 @@
 package hello.world
 
 import android.os.Bundle
-import androidx.activity.compose.setContent
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.text.BasicText
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorProducer
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.utsman.kece.R
 import io.ktor.client.*
 import io.ktor.client.engine.okhttp.*
 import io.ktor.client.request.*
@@ -67,49 +55,30 @@ class MainViewModel : ViewModel() {
     }
 }
 
-@Composable
-fun Screen() {
-    val viewModel: MainViewModel = viewModel()
-    val state by viewModel.renderState.collectAsState()
-    
-    LaunchedEffect(Unit) {
-        viewModel.getProduct()
-    }
-
-    MaterialTheme {
-        Column(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            when (val value = state) {
-                is RenderState.RenderLoading -> {
-                    CircularProgressIndicator()
-                }
-                is RenderState.RenderProduct -> {
-                    BasicText(
-                        text = value.product
-                    )
-                }
-                is RenderState.RenderFailure -> {
-                    BasicText(
-                        text = value.throwable.localizedMessage.orEmpty(),
-                        color = ColorProducer {
-                            Color.Red
-                        }
-                    )
-                }
-                else -> {}
-            }
-        }
-    }
-}
-
 class MainActivity : AppCompatActivity() {
+
+    val viewModel: MainViewModel by lazy {
+        viewModelFactory {  }
+            .create(MainViewModel::class.java)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Screen()
+        setContentView(R.layout.activity_main)
+
+        lifecycleScope.launch {
+            viewModel.renderState.collectLatest { renderState ->
+                when (renderState) {
+                    is RenderState.RenderProduct -> {
+                        findViewById<TextView>(R.id.activity_main)
+                                .text = renderState.product
+                    }
+                    else -> {
+                        findViewById<TextView>(R.id.activity_main)
+                                .text = renderState.javaClass.simpleName
+                    }
+                }
+            }
         }
     }
 }

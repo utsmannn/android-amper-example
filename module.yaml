@@ -3,11 +3,10 @@
 product: android/app
 
 dependencies: 
-  - $compose.foundation
-  - $compose.material3
-  - androidx.activity:activity-compose:1.7.2 # integration compose with activities
   - androidx.appcompat:appcompat:1.6.1 # we need special type of activity
-  - androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1
+  - androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1
+  - androidx.lifecycle:lifecycle-viewmodel-livedata:2.6.1
+  - androidx.fragment:fragment-ktx:2.6.1
   - io.ktor:ktor-client-core:2.3.6
   - io.ktor:ktor-client-okhttp:2.3.6
   - io.ktor:ktor-client-logging:2.3.6
@@ -15,6 +14,6 @@ dependencies:
   - io.ktor:ktor-client-encoding:2.3.6
 
 settings: 
-  compose: enabled
+  compose: disabled
   android: 
     namespace: com.utsman.kece
